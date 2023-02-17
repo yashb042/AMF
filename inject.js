@@ -1,4 +1,4 @@
-const _MAX_LOADING_WAIT_TIME = 30;
+const _MAX_LOADING_WAIT_TIME = 60;
 const _TIMEOUT_IN_SECS = 60;
 const _MAX_TYPE = 26;
 

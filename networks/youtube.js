@@ -14,7 +14,7 @@ function do_yt_like() {
 function do_yt_sub() {
 
     state = _STATE_WAIT_TO_CLOSE;
-    wait_time = generateRandom(5, 8);
+    wait_time = generateRandom(10, 20);
 
     const buttons = document.querySelectorAll('.ytd-subscribe-button-renderer');
     if ((!buttons) || (buttons.length < 1)) {
@@ -23,9 +23,13 @@ function do_yt_sub() {
     }
 
     for (let i = 0; i < buttons.length; i++) {
+        console.log("buttons length - " + buttons.length)
         const s = buttons[i].textContent;
+        console.log("button name - " + buttons[i].textContent)
         if (s === 'Subscribe') {
-            buttons[i].click();
+            console.log("Yes subscribe")
+            let click = buttons[i].click();
+            console.log(click)
             break;
         }
     }
