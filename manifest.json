@@ -1,12 +1,10 @@
 {
   "name": "AMF",
   "background": {
-    "scripts": [
-      "background.js"
-    ]
+    "service_worker": "background.js"
   },
   "version": "1.0.2",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "description": "Automatic Bot",
   "homepage_url": "https://www.google.com/",
   "icons": {
@@ -15,7 +13,7 @@
     "128": "icons/icon128.png"
   },
   "default_locale": "en",
-  "browser_action": {
+  "action": {
     "default_icon": "icons/icon32.png",
     "default_title": "AMF",
     "default_popup": "popup/popup.html"

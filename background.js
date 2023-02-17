@@ -435,4 +435,4 @@ chrome.storage.sync.get('reverbnation-follow', function (data) {
     }
 });
 
-console.log(data)
+// console.log(data)
