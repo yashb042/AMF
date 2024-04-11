@@ -439,7 +439,7 @@ function checkReloadButton() {
 
     const btn = document.querySelector('input[name="reload"]');
     if (btn) {
-        wait_time = generateRandom(20, 30);
+        wait_time = generateRandom(40, 50);
         clog("Page Reloaded");
         btn.click();
     }
@@ -601,7 +601,7 @@ const readyStateCheckInterval = setInterval(function () {
             console.log("wait timeout, next type");
             nextActionType();
             state = _STATE_WAIT;
-            wait_time = generateRandom(20, 30);
+            wait_time = generateRandom(40, 50);
             window.location.href = CurActionUrl;
         }
 
@@ -620,7 +620,7 @@ const readyStateCheckInterval = setInterval(function () {
         console.log("unknown url, get next type");
         nextActionType();
         state = _STATE_WAIT;
-        wait_time = generateRandom(20, 30);
+        wait_time = generateRandom(40, 50);
         window.location.href = CurActionUrl;
         return;
     }
@@ -645,7 +645,7 @@ const readyStateCheckInterval = setInterval(function () {
             console.log("No Button Found !");
             nextActionType();
             state = _STATE_WAIT;
-            wait_time = generateRandom(20, 30);
+            wait_time = generateRandom(40, 50);
             window.location.href = CurActionUrl;
             return;
         }
@@ -656,7 +656,7 @@ const readyStateCheckInterval = setInterval(function () {
                 console.log("max-click " + click_count + ", next type");
                 nextActionType();
                 state = _STATE_WAIT;
-                wait_time = generateRandom(20, 30);
+                wait_time = generateRandom(40, 50);
                 window.location.href = CurActionUrl;
                 return;
             }
@@ -666,7 +666,7 @@ const readyStateCheckInterval = setInterval(function () {
             wait_time = generateRandom(90, 12);
             chrome.runtime.sendMessage({action: "setActType", actType: config.actionType});
         } else {
-            wait_time = generateRandom(5, 10);
+            wait_time = generateRandom(40, 50);
         }
 
         btn.click();
